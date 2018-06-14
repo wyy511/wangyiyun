@@ -1,7 +1,7 @@
 <view class="hotsong__playlist-wrap playlist-wrap">
     <view class="hotsong">
         <view class="hotsong-item" wx:for="{{hotsong}}" wx:key="index" id="{{item.id}}" bindtap="toDetail">
-            <image class="img" src="{{item.coverImgUrl}}"/>
+            <image class="img" src="{{item.coverImgUrl}}" lazy="loaded"/>
             <view class="song-wrap"> 
                 <view class="song-list" wx:for="{{item.tracks}}" wx:for-item="track" wx:for-index="i" wx:key="track" wx:if="{{i<3}}">
                     <text class="name">

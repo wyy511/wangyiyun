@@ -1,6 +1,6 @@
 <view class="play-page">
   <view class="play-bg">
-    <image class="img-bg" src="{{cover}}"></image> 
+    <image class="img-bg" src="{{cover}}" lazy="loaded"></image> 
     <view class="black-lay"></view>
   </view>
   
@@ -10,7 +10,7 @@
   </view>
   <view class="content">
     <view class="cover" animation="{{rotateAnimation}}">
-        <image class="img" src="{{cover}}" mode="aspectFill"></image>  
+        <image class="img" src="{{cover}}" mode="aspectFill" lazy="loaded"></image>  
     </view>
   </view>
   <view class="footer">

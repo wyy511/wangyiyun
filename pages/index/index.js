@@ -6,7 +6,7 @@ Page({
     data: {
         playlist: [],
         newsong: [],
-        navStatus: 'hotsong',
+        navStatus: 'recommand',
         hotsong: [],
         count: 0,  // 记录共有多少条list
         limit: 5 

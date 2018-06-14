@@ -3,7 +3,7 @@
   <view class="playlist-list">
     <block wx:for="{{playlist}}" wx:key="{{item.id}}">
       <view class="playlist-item" id="{{item.id}}" bindtap="toDetail">
-        <image class="img" src="{{item.picUrl}}"/>
+        <image class="img" src="{{item.picUrl}}" lazy="loaded"/>
         <view class="playlist-text">{{item.name}}</view>
         <view class="ear">{{item.playCount}}</view>
       </view>
@@ -15,7 +15,7 @@
   <view class="playlist-list">
     <block wx:for="{{newsong}}" wx:key="{{item.id}}" wx:if="{{index<=8}}">
       <view class="playlist-item" id="{{item.id}}" bindtap="play"> 
-        <image class="img" src="{{item.song.album.picUrl}}"/>
+        <image class="img" src="{{item.song.album.picUrl}}" lazy="loaded"/>
         <view class="playlist-text">{{item.name}}</view>
         <view class="ear">{{item.playCount}}</view>
       </view>
