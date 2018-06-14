@@ -1,0 +1,24 @@
+<view class="recommend__playlist-wrap playlist-wrap">
+  <text class="playlist-title">推荐歌单</text>
+  <view class="playlist-list">
+    <block wx:for="{{playlist}}" wx:key="{{item.id}}">
+      <view class="playlist-item" id="{{item.id}}" bindtap="toDetail">
+        <image class="img" src="{{item.picUrl}}"/>
+        <view class="playlist-text">{{item.name}}</view>
+        <view class="ear">{{item.playCount}}</view>
+      </view>
+    </block>
+  </view>
+</view>
+<view class="recommend__lastmusic-wrap playlist-wrap">
+  <text class="playlist-title">推荐歌单</text>
+  <view class="playlist-list">
+    <block wx:for="{{newsong}}" wx:key="{{item.id}}" wx:if="{{index<=8}}">
+      <view class="playlist-item" id="{{item.id}}" bindtap="play"> 
+        <image class="img" src="{{item.song.album.picUrl}}"/>
+        <view class="playlist-text">{{item.name}}</view>
+        <view class="ear">{{item.playCount}}</view>
+      </view>
+    </block>
+  </view>
+</view>

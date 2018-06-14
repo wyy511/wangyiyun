@@ -1,0 +1,29 @@
+<view class="detail-wrap">
+    <view class="header">
+        <image class="cover" src="{{detail.coverImgUrl}}" />
+        <view class="black-lay"></view>
+        <view class="text">
+            <view class="name">{{detail.name}}</view>
+            <view class="ear">{{detail.playCount}}</view>
+        </view>
+    </view>
+    <view class="content">
+        <view class="all">
+            <image class="play-icon" src="../../images/play.jpg"/>
+            播放全部
+            <text class="count">(共{{detail.trackCount}}首)</text>
+        </view>
+        <block wx:for="{{detail.tracks}}" wx:key="index">
+            <view class="detail-item" id="{{item.id}}" data-item="{{item}}" bindtap="play">
+                <view class="num">{{index+1}}</view>
+                <view class="des">
+                    <text class="title">{{item.name}}</text>
+                    <text class="subtitle">{{item.artists[0].name}}</text>
+                </view>
+                
+            </view>
+        </block>
+        
+    </view>
+    
+</view>

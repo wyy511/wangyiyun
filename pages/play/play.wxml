@@ -1,0 +1,36 @@
+<view class="play-page">
+  <view class="play-bg">
+    <image class="img-bg" src="{{cover}}"></image> 
+    <view class="black-lay"></view>
+  </view>
+  
+  <view class="header">
+    <view class="name">{{name}}</view>
+    <view class="title">{{title}}</view>
+  </view>
+  <view class="content">
+    <view class="cover" animation="{{rotateAnimation}}">
+        <image class="img" src="{{cover}}" mode="aspectFill"></image>  
+    </view>
+  </view>
+  <view class="footer">
+    <view class="control-wrap">
+      <view class="way shunxu">
+        <icon class="icon iconfont icon-{{randState}}}" bindtap="rand"></icon>
+      </view>
+      
+      <view class="way houtui">
+        <icon class="icon iconfont icon-houtui" data-type="back" bindtap="trigger"></icon>
+      </view>
+      <view class="way play">
+        <icon class="icon iconfont {{isPlaying?'icon-play':'icon-pause'}}" bindtap="play"></icon>
+      </view>
+      <view class="way qianjin">
+        <icon class="icon iconfont icon-qianjin" data-type="forward" bindtap="trigger"></icon>
+      </view>
+      <view class="way love">
+        <icon class="icon iconfont icon-love" bindtap="love"></icon>
+      </view>
+    </view>
+  </view>
+</view>

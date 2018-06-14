@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class="page">
+  <view class="wyy-topfix">
+    <view class="logo-wrap">
+      <view class="logo"></view>
+    </view>
+    <view class="nav-wrap">
+      <nav></nav>
+    </view>
+  </view>
+  <view class="wyy-container">
+    <recommend playlist="{{playlist}}" newsong="{{newsong}}"></recommend>
+  </view>
+  
+</view>

@@ -1,0 +1,17 @@
+{
+    "pages": [
+        "pages/index/index",
+        "components/nav/nav",
+        "pages/recDetail/recDetail",
+        
+        "components/recommend/recommend",
+        "pages/play/play"
+        
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "music",
+        "navigationBarTextStyle": "black"
+    }
+}

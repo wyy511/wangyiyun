@@ -1,0 +1,8 @@
+<!--logs.wxml-->
+<view class="navs">
+  <block wx:for="{{navs}}" wx:key="index">
+    <view class="nav-item {{currentNav == item.id ? 'active' : ''}}" data-item="{{item}}" bindtap="trigger">
+      <text class="nav-title">{{item.title}}</text>
+    </view>
+  </block>
+</view>

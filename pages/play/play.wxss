@@ -1,0 +1,122 @@
+@import '../../static/font/iconfont.wxss';
+.play-page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  
+}
+.play-bg {
+  filter: blur(30px);
+  opacity: 0.6;
+}
+.img-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+.black-lay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+.header {
+  margin-top: 40rpx;
+  filter: blur(0px);
+  opacity: 1;
+}
+.header .name{
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 50rpx;
+}
+.header .title{
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 30rpx;
+}
+.content {
+  width: 600rpx;
+  height: 600rpx;
+  text-align: center;
+  line-height: 600rpx;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.content .cover{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #919595;
+  filter: blur(0px);
+  opacity: 1;
+  overflow: hidden;
+  /* -webkit-animation: rotate 8s linear infinite;
+  animation: rotate 8s linear infinite;   */
+}
+.content .img {
+  width: 520rpx;
+  height: 520rpx;
+  margin-top: 40rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+/* @keyframes rotate {
+  0%{
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360);
+    transform: rotate(360);
+  }
+  
+}   */
+.footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 160rpx;
+}
+.control-wrap {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.control-wrap .way {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  color: #f1f1f1;
+}
+.control-wrap .way .icon {
+  font-size: 44rpx;
+}
+
+.control-wrap .shunxu, .control-wrap .houtui {
+  text-align: right;
+}
+.control-wrap .play {
+  text-align: center;
+  margin: 0 40rpx;
+}
+.control-wrap .play .icon {
+  font-size: 80rpx;
+}
+.control-wrap .qianjin, .control-wrap .love {
+  text-align: left;
+}
+.control-wrap .qianjin .icon, .control-wrap .houtui .icon {
+  font-size: 50rpx;
+}
