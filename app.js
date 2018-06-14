@@ -36,7 +36,8 @@ App({
     globalData: {
         userInfo: null,
         host: 'http://120.79.162.149:3000',
-        wyy_playlist: null
+        wyy_playlist: null,
+        navStatus: 'recommend'
     },
     host: 'http://120.79.162.149:3000'
 })

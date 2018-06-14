@@ -1,3 +1,4 @@
+const app = getApp()
 Component({
     properties: {
         playlist: {
@@ -8,23 +9,27 @@ Component({
     data: {
         navs: [{
                 title: '推荐音乐',
-                id: 'recommand'
+                id: 'recommend'
             },
             {
                 title: '热歌榜',
-                id: 'hotSong'
+                id: 'hotsong'
             },
             {
                 title: '搜索',
                 id: 'search'
             }
         ],
-        currentNav: 'recommand'
+        currentNav: 'recommend'
     },
-    trigger: function(data) {
-        this.setData({
-            currentNav: data.currentTarget.dataset.item.id
-        })
+    methods: {
+        trigger: function(data) {
+            this.setData({
+                currentNav: data.currentTarget.dataset.item.id
+            })
+            this.triggerEvent('getNav', this.data.currentNav)
+        },
     },
+    
     onLoad: function() {}
 })

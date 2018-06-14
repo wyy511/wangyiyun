@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 0,
 			"list": [
 				{
 					"id": 0,
@@ -46,6 +46,12 @@
 					"name": "play",
 					"pathName": "pages/play/play",
 					"query": "id=308372&picId_str=119846767428537&picUrl=http://p1.music.126.net/xDRjTqGSDfP67wo5giZWFw"
+				},
+				{
+					"id": 2,
+					"name": "hotsong",
+					"pathName": "pages/hotsong/hotsong",
+					"query": ""
 				}
 			]
 		}

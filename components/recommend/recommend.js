@@ -36,7 +36,6 @@ Component({
             })
         },
         getNewSongList: function () {
-          console.log(this.data.newsong)
           let list = this.data.newsong,
               data = []
               

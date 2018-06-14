@@ -1,11 +1,15 @@
 //index.js
-import { getRecommendList, getRecommendNewSong } from '../../api/recommend'
+import { getRecommendList, getRecommendNewSong, getHotSong } from '../../api/recommend'
 //获取应用实例
 const app = getApp()
 Page({
     data: {
         playlist: [],
-        newsong: []
+        newsong: [],
+        navStatus: 'hotsong',
+        hotsong: [],
+        count: 0,  // 记录共有多少条list
+        limit: 5 
     },
     //事件处理函数
     bindViewTap: function() {
@@ -16,6 +20,7 @@ Page({
     onLoad: function() {
         getRecommendList({}, this.recSuccess) // 获取推荐歌单列表
         getRecommendNewSong({}, this.recNewSongSuccess)
+        this.getHotList()
         if (app.globalData.userInfo) {
             this.setData({
                 userInfo: app.globalData.userInfo,
@@ -43,6 +48,11 @@ Page({
             })
         }
     },
+    getHotList: function () {
+        for(let i = 0; i < this.data.limit; i++) {
+            getHotSong({id: i}, this.hotListSuccess)
+        }
+    },
     getUserInfo: function(e) {
         app.globalData.userInfo = e.detail.userInfo
         this.setData({
@@ -63,5 +73,18 @@ Page({
                 newsong: res.data.result
             })
         }
+    },
+    hotListSuccess: function(res) {
+        let data = this.data.hotsong
+        data.push(res.data.playlist)
+        this.setData({
+            hotsong: data
+        })
+        console.log(this.data.hotsong)
+    },
+    getNav: function (e) {
+        this.setData({
+            navStatus: e.detail
+        })
     }
 })

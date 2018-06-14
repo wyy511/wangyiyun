@@ -5,11 +5,12 @@
       <view class="logo"></view>
     </view>
     <view class="nav-wrap">
-      <nav></nav>
+      <nav bind:getNav="getNav"></nav>
     </view>
   </view>
   <view class="wyy-container">
-    <recommend playlist="{{playlist}}" newsong="{{newsong}}"></recommend>
+    <recommend playlist="{{playlist}}" newsong="{{newsong}}" wx:if="{{navStatus == 'recommend'}}"></recommend>
+    <hot-song hotsong="{{hotsong}}" wx:if="{{navStatus == 'hotsong'}}"></hot-song>
   </view>
   
 </view>

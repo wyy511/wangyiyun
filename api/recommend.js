@@ -8,6 +8,7 @@ const RECOMMENDNEWSONG = app.globalData.host + '/personalized/newsong/' // 推�
 const RECOMMENDDETAIL = app.globalData.host + '/playlist/detail/?id=' // 推荐列表详情
 const PLAYLYRIC = app.globalData.host + '/lyric/?id=' // 播放页
 const PLAYINFO = app.globalData.host + '/music/url/?id=' // 播放页
+const HOTSONG = app.globalData.host + '/top/list/?idx=' // 排行榜页
 
 var url = ''
 export function getRecommendList(params = {}, callback) {
@@ -30,3 +31,7 @@ export function getPlayInfo(params, callback) {
   url = PLAYINFO + params.id
   ajaxData(url, 'GET', {}, callback)
 }
+export function getHotSong(params, callback) {
+    url = HOTSONG + params.id
+    ajaxData(url, 'GET', {}, callback)
+  }

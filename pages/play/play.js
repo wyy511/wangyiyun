@@ -94,7 +94,7 @@ Page({
   },
   createRotateAnimation() {
     var animation = wx.createAnimation({
-      duration: 200,
+      duration: 1000,
       timingFunction: 'linear',
     })
     this.animation = animation

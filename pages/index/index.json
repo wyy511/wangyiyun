@@ -1,6 +1,7 @@
 {
     "usingComponents": {
         "nav": "/components/nav/nav",
-        "recommend": "/components/recommend/recommend"
+        "recommend": "/components/recommend/recommend",
+        "hot-song": "/components/hotsong/hotsong"
     }
 }

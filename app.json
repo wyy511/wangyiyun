@@ -5,6 +5,7 @@
         "pages/recDetail/recDetail",
         
         "components/recommend/recommend",
+        "components/hotsong/hotsong",
         "pages/play/play"
         
     ],
