@@ -57,7 +57,7 @@ Page({
     innerAudioContext.autoplay = this.data.autoplay
     this.getPageInfo(id)
     this.getFilterData(id, "cover") // 获取封面信息
-    this.createRotateAnimation()
+    // this.createRotateAnimation()
   },
   getFilterData(id, type) { // 过滤数据
     let list = this.data.playlist
@@ -94,7 +94,7 @@ Page({
   },
   createRotateAnimation() {
     var animation = wx.createAnimation({
-      duration: 1000,
+      duration: 100,
       timingFunction: 'linear',
     })
     this.animation = animation
@@ -112,14 +112,14 @@ Page({
     this.setData({
       timer: setTimeout(function () {
         that.setData({
-          rat: that.data.rat+10
+          rat: that.data.rat+2
         })
         that.animation.rotate(1 * (that.data.rat)).step()
         that.setData({
           rotateAnimation: that.animation.export()
         })
         that.setRotateTimer()
-      }.bind(this), 200)
+      }.bind(this), 100)
     })
   },
   clearRotateTimer: function () {

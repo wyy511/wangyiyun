@@ -60,16 +60,18 @@
 }
 
 .detail-item {
+    
+    
     height: 120rpx;
     color: rgba(126, 120, 120, 0.8);
-    padding: 0rpx 40rpx;
+    /* padding: 0rpx 40rpx; */
     border-top: 1px solid rgba(126, 120, 120, 0.5);
 }
 
 .detail-item:last-child {
     height: 120rpx;
     color: rgba(126, 120, 120, 0.8);
-    padding: 0rpx 40rpx;
+    /* padding: 0rpx 40rpx; */
     border-bottom: 1px solid rgba(126, 120, 120, 0.5);
 }
 
@@ -79,6 +81,7 @@
 }
 
 .detail-item .des {
+    width: 85%;
     height: 100%;
     padding-top: 26rpx;
     vertical-align: middle;
@@ -87,10 +90,15 @@
 .detail-item .title,
 .detail-item .subtitle {
     display: block;
+    word-break: keep-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .detail-item .num {
-    padding-right: 40rpx;
+    width: 15%;
+    text-align: center;
 }
 
 .detail-item .title {

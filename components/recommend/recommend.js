@@ -26,7 +26,7 @@ Component({
                 id: 'search'
             }
         ],
-        currentNav: 'recommand'
+        currentNav: 'recommend'
     },
     methods: {
         toDetail: function(data) {

@@ -15,10 +15,10 @@ Component({
                 title: '热歌榜',
                 id: 'hotsong'
             },
-            {
-                title: '搜索',
-                id: 'search'
-            }
+            // {
+            //     title: '搜索',
+            //     id: 'search'
+            // }
         ],
         currentNav: 'recommend'
     },

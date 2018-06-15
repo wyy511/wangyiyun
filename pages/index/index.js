@@ -6,10 +6,10 @@ Page({
     data: {
         playlist: [],
         newsong: [],
-        navStatus: 'recommand',
+        navStatus: 'recommend',
         hotsong: [],
         count: 0,  // 记录共有多少条list
-        limit: 5 
+        limit: 5
     },
     //事件处理函数
     bindViewTap: function() {
@@ -80,9 +80,11 @@ Page({
         this.setData({
             hotsong: data
         })
-        console.log(this.data.hotsong)
     },
     getNav: function (e) {
+        if(e.detail == 'hotsong') {
+            // app.globalData.wyy_playlist = data
+        }
         this.setData({
             navStatus: e.detail
         })
